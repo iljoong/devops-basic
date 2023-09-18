@@ -25,5 +25,5 @@ dotnet publish -c Release -o out
 
 ## Pipeline samples
 
-- pipeline using MSFT-hosted agent: [build-pipeline.yml](./pipelines/build-pipeline.yml)
-- pipeline using self-hosted agent: [build-pipeline_private.yml](./pipelines/build-pipeline_private.yml)
+- pipeline using MSFT-hosted agent: [_build-pipeline.yml](./pipelines/_build-pipeline.yml)
+- pipeline using self-hosted agent: [_build-pipeline_private.yml](./pipelines/_build-pipeline_private.yml)
