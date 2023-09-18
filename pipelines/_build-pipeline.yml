@@ -18,7 +18,7 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET Core sdk 6.0'
+  displayName: 'Use .NET Core sdk 7.0'
   inputs:
     version: 7.0.401
 - task: DotNetCoreCLI@2
