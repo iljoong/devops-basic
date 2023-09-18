@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
+using System.IO;
+using System.Diagnostics;
+using System.Reflection;
+
 namespace dotnetapp.Pages
 {
     public class IndexModel : PageModel
@@ -19,7 +23,14 @@ namespace dotnetapp.Pages
 
         public void OnGet()
         {
+            ViewData["Version"] = GetVersion();
 
         }
+
+        private string GetVersion()
+        {
+            return FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
+        }
+
     }
 }

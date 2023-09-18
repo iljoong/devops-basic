@@ -4,11 +4,12 @@
 # https://aka.ms/yaml
 
 trigger:
-#- master
+#- main
 - none
 
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software
 pool:
+  #vmImage: windows-2019
   vmImage: ubuntu-latest
 
 variables:
@@ -19,7 +20,7 @@ steps:
 - task: UseDotNet@2
   displayName: 'Use .NET Core sdk 6.0'
   inputs:
-    version: 6.0.x
+    version: 7.0.401
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
